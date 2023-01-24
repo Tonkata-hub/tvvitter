@@ -2,11 +2,25 @@
   <v-app id="inspire">
     <v-navigation-drawer v-model="drawer">
       <v-btn
-        v-for="nav in navButtons"
         elevation="2"
         class="btn"
         size="large"
-      >{{ nav }}</v-btn>
+      ><router-link to="/">Home</router-link></v-btn>
+      <v-btn
+        elevation="2"
+        class="btn"
+        size="large"
+      ><router-link to="/register">Register</router-link></v-btn>
+      <v-btn
+        elevation="2"
+        class="btn"
+        size="large"
+      ><router-link to="/">Profile</router-link></v-btn>
+      <v-btn
+        elevation="2"
+        class="btn"
+        size="large"
+      ><router-link to="/">Settings</router-link></v-btn>
     </v-navigation-drawer>
 
     <v-app-bar>
@@ -26,11 +40,6 @@
     data (){ 
       return {
         drawer: null,
-        navButtons: [
-          'Home',
-          'Profile',
-          'Settings'
-        ],
       }
     }
   }
